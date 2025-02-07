@@ -1,0 +1,118 @@
+h1 {
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    font-family: 'Times New Roman',sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: rgb(200, 222, 255);
+}
+body {
+    margin:em;
+    padding:100;
+}
+
+.container {
+    font-family: 'EB Garamond', serif;
+    width:100%;
+    height: 100vh;
+    margin: 0 ; 
+    padding:auto;
+    display: grid;
+    /*grid-template-rows: repeat(6,1fr);
+    grid-template-columns: repeat(6,100px);*/
+    grid-template-rows: 100px 1fr 50px;
+    grid-template-columns:1fr 4fr ;
+    grid-template-areas:
+        'header header'
+        'main aside'
+        'footer footer';
+}
+
+.item {
+    padding: .1em;
+    background-color: rgb(255, 255, 255);
+    border: 5px solid #000000;
+}
+
+.item-1 {
+    padding-left: 0%;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-color: rgb(119, 117, 138);
+    padding: 0 20px;
+}
+.item-1 a{
+    /* display:block; */
+    font-family: 'Garamond',serif;
+    color:#252525;
+    margin:  0 20px;
+    font-size: 25px;;
+    background-color: rgb(119, 117, 138);
+    padding: 0 20px; 
+}
+
+.item-1 a:hover{
+    color: rgb(255, 215, 215);
+}
+
+/* .item-2 {
+    grid-row-start: 1;
+    grid-row-end:4;
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-area: 2/4/4/6; 
+    z-index:1;
+    grid-area:main;
+}
+
+.item-2 a{
+    display:block;
+    padding: 10px; 
+} */
+
+.item-3 {
+    grid-row-start: 1; /* Start at row 1 */
+    grid-row-end: -1;  /* Span to the last row */
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-area: aside;
+    padding: .1em;
+    background-color: rgb(255, 255, 255);
+    border: 4px solid #000000;
+}
+
+.item-4 {
+    grid-area: footer;
+}
+
+.item-5 a:hover{
+    color: rgb(255, 215, 215);
+}
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: #333;
+    color: #333;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(243, 251, 228, 0.899)
+}
+
+.centered-image {
+    width: 50%; 
+    height: auto; 
+    display: block;
+    margin: 0 auto;
+}
+
+.home{
+    width: 100px; 
+    height: 100px;
+}
