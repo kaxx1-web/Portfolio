@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../p5_inclass"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "p5_inclass"
+	}
+}
