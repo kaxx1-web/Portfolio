@@ -1,9 +1,12 @@
 body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background-color:rgb(213,202,189);
-    font-family: "Schibsted Grotesk", serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color:rgb(213,202,189);
+  font-family: 'EB Garamond',serif;
+  font-weight: 200;
+  font-size: 2em;
+  font-stretch: extra-condensed;
 }
 
 .container {
@@ -26,37 +29,39 @@ body {
 }
 
 .sidebar-container{ 
-    grid-area: sidebar;
-    display:flex;
-    flex-direction: column; /* this is what makes it vertical*/
-    align-items: center;
-    justify-content: flex-start;
-    background-color: rgb(165,189,191);
-    padding: 0 20px;
-    grid-row: 1/4;
-    grid-column-end: 1;
+  grid-area: sidebar;
+  display:flex;
+  flex-direction: column; /* this is what makes it vertical*/
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  background-color: rgb(165,189,191);
+  padding: 0 30px;
+  grid-row: 1/4;
+  grid-column-end: 1;
 }
 
 .sidebar-container a{
-    font-family: 'Garamond',serif;
-    color:#333;
-    margin: 15px 0;
-    font-size:25px;
-    transition: color 0.3s ease;
-    padding: 0 20px; 
-    display:grid;
-    text-align: inline-grid;
+  font-family: 'EB Garamond',sans-serif;
+  font-stretch: extra-condensed;
+  color:#434343;
+  margin: 1em 0;
+  font-size:20px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  display:grid;
+  text-align: inline-grid;
 }
 
 .sidebar-container a:hover{
-    color: rgb(63,97,132);
+  color: rgb(80, 131, 182);
 }
 
 .sidebar-container img.home{ /*my little icon*/
-    width: 100px;
-    height:100px;
-    margin-bottom: 10px;
-    margin-top: 20px;
+  width: 120px;
+  height:120px;
+  margin-bottom: 10px;
+  margin-top: 15px;
 }
 
 .main-content{
@@ -106,38 +111,34 @@ body {
     bottom: 8px;
     right: 16px;
     font-size: 22px;
-  }
-.header .item-3 {
-    grid-column: 1/-3;
-    grid-row: 2/3;
-    padding: 1;
-    font-family: "Schibsted Grotesk", serif;
 }
+
+ /* Footer styles */
+ footer {
+  text-align: center;
+  padding: 1px;
+  /* background-color: #333; */
+  color: #333;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  /* background-color: rgba(168, 207, 182, 0.941) */
+  background-color: rgba(243, 251, 228, 0.940)
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  letter-spacing: 1px;
+  font-size:15px;
+}
+
 
 .centered-image {
     max-width: 100%; 
     height: auto; 
     display: block;
     margin: 0 auto;
-}
-
-.item-4 {
-    grid-area: footer;
-}
-
-.item-4 a:hover{
-    color: rgb(255, 215, 215);
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    /* background-color: #333; */
-    color: #333;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: rgba(243, 251, 228, 0.899)
 }
 
 .h1 .item-2 {
