@@ -188,3 +188,25 @@ footer {
     letter-spacing: 1px;
     font-size:15px;
 }
+
+/* Controller Buttons */
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.5s;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover i {
+    color: #636363;
+}
+
+i {
+    font-size: 50px;
+    color: gray;
+}
