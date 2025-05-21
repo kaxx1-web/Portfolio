@@ -1,19 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Community Tool or Quiz</title>
-    </head>
-    <body>
-        <button> My Button to begin </button>
-        <script src="script.js"></script>
-        <form id="form1">
-            enter a word: <input type="text" name="word" value=""><br>
-            And its opposite: <input type="text" name="opposite" value="">
-        </form>
-        <h2>This is a test to where I will end up putting my community tool </h2>
-        <h2> topic concept: subway i think queens to brooklyn?</h2>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Quiz | Works</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Schibsted+Grotesk:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href= "page.css"/>
 
-    </body>
+<body>
+    <div class="container">
+        <!-- ======= SIDEBAR NAVIGATION ======= -->
+        <div class="sidebar-container">
+            <div class="sidebar">
+                <a href="../index.html">
+                    <img src="../images/icon1.jpg" class="home" alt="Home"></a> 
+                <a href="../works.html">parsons</a> 
+                <a href="../assignments.html">personal</a> 
+                <a href="../contact.html">contact</a> 
+                <a href="../about.html">about me</a> 
+            </div>
+        </div>
+        
+        <!-- ======= HEADER SECTION ======= -->
+        <div class="header">
+            <div class="item-3">
+                <header>Community Tool</header>
+            </div>
+            <div class="bottomright">
+                Parsons
+            </div>
+        </div>
+
+        <!-- ======= MAIN CONTENT ======= -->
+        <div class="h1">
+            <div class="item-2">
+                <nav>
+                    <menu> 
+                        <!-- what holds the content//MENU
+                            Interactive Book Component -->
+                            <div class="book-container" id="book-project">
+                            <button id="prev-btn"> ← </button>
+                            
+                            <div id="book" class="book">
+                                <!-- Paper 1 -->
+                                <div id="p1" class="paper">
+                                    <div class="front">
+                                        <div id="f1" class="front-content">
+                                            nyc subway
+                                            just the MTA or is it the organization?
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div id="b1" class="back-content">
+                                            as a new yorker, there has akways been an issue within the transportation system!
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Paper 2 -->
+                                <div id="p2" class="paper">
+                                    <div class="front">
+                                        <div id="f2" class="front-content">
+                                            2
+                                            More interactive elements here
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div id="b2" class="back-content">
+                                            3
+                                            Additional content here
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Paper 3 -->
+                                <div id="p3" class="paper">
+                                    <div class="front">
+                                        <div id="f3" class="front-content">
+                                            
+                                            Final interactive 
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div id="b3" class="back-content">
+                                            Thank You for taking this survey
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <button id="next-btn">  →</button>
+                        </div>
+                    </menu>
+                </nav>
+            </div>
+        </div>
+
+        <!-- ======= FOOTER ======= -->
+        <footer id="footer">
+            <div class="footer-container">
+                <p>© Karen Xiao. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+</body>
 </html>
