@@ -1,0 +1,309 @@
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color:rgb(213,202,189);
+    font-family: 'EB Garamond',serif;
+    font-weight: 200;
+    font-size: 2em;
+    font-stretch: extra-condensed;
+}
+
+.container {
+    width:100%;
+    height: 100vh;
+    margin: 0 ; 
+    padding:0;
+    display: grid;
+    grid-template-rows: 100px 1fr 50px;
+    grid-template-columns: 180px 1fr ;
+    grid-template-areas:
+        'sidebar header'
+        'sidebar main'
+        'footer footer';
+}
+
+.item {
+    padding:.1em;
+    background-color: rgb(255, 255, 255);
+}
+
+.sidebar-container{ 
+    grid-area: sidebar;
+    display:flex;
+    flex-direction: column; /* this is what makes it vertical*/
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    background-color: rgb(165,189,191);
+    padding: 0 30px;
+    grid-row: 1/4;
+    grid-column-end: 1;
+}
+
+.sidebar-container a{
+    font-family: 'EB Garamond',sans-serif;
+    font-stretch: extra-condensed;
+    color:#434343;
+    margin: 1em 0;
+    font-size:20px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    display:grid;
+    text-align: inline-grid;
+}
+
+.sidebar-container a:hover{
+    color: rgb(80, 131, 182);
+}
+
+.sidebar-container img.home{ /*my little icon*/
+    width: 120px;
+    height:120px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+.main-content{
+    font-size: 20px ;
+    grid-area: main;
+    display:grid;
+    /* grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(2,1fr); */
+    gap: 20px;
+    padding:0.5em;
+    background-color: #fff;
+}
+
+.item-2 {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    background-color: rgb(213,202,189);
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 150px); /* Adjust this value as needed */
+}
+
+.header{
+    grid-area: header;
+    display: grid;
+    background-color: #c6c09d;
+    position: relative;
+}
+.item-3 {
+    grid-column: 1/-3;
+    grid-row: 2/3;
+    padding: 1;
+    font-family:'EB Garamond',sans-serif;
+    font-stretch: extra-condensed;
+    font-size: 65px;
+    font-weight: 500;
+    text-align: center;
+    align-self: center;
+    color:#fff;
+}
+
+.bottomright {
+    grid-area:header;
+    font-family: monospace;
+    color: #e1f7fd;
+    position: absolute;
+    font-size: 0.8em;
+    padding: 0.8em;
+    font-weight: 200;
+    bottom: 0.1px;
+    right: 6px;
+    font-size: 22px;
+}
+
+
+/* Book */
+.book-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* space between the buttons and the book */
+    width: 100%;
+}
+.book {
+    position: relative;
+    width: 350px;
+    height: 500px;
+    transition: transform 0.5s;
+    margin: 0 auto;
+}
+
+.paper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    perspective: 1500px;
+    transition: background-color 0.5s ease;
+    pointer-events: none;
+}
+
+.front,
+.back {
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+.front {
+    z-index: 1;
+    backface-visibility: hidden;
+    border-left: 3px solid powderblue;
+}
+
+.back {
+    z-index: 0;
+}
+
+.front-content,
+.back-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    font-family: 'Franklin Gothic Medium','Arial Narrow';    
+    box-sizing: border-box;
+    pointer-events: auto;
+}
+
+/* Paper flip effect */
+.flipped .front,
+.flipped .back {
+    transform: rotateY(-180deg);
+}
+
+/* Controller Buttons */
+#prev-btn, #next-btn {
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    padding: 0 30px;
+    color: #ffffff;
+    align-self: center;
+}
+
+#prev-btn:hover, #next-btn:hover {
+    color: #635eff;
+}
+
+/* Paper stack order */
+#p1 {
+    z-index: 3;
+}
+
+#p2 {
+    z-index: 2;
+}
+
+#p3 {
+    z-index: 1;
+}
+
+/* Footer styles */
+footer {
+    grid-area: footer;
+    text-align: center;
+    padding: 15px 0;
+    background-color: rgba(243, 251, 228, 0.94);
+    color: #333;
+    width: 100%;
+    font-size: 15px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    letter-spacing: 1px;
+    padding: 0 20px;
+}
+
+.front-content {
+    color: rgb(0, 0, 0);
+    padding: 0 20px;
+    font-family: 'Franklin Gothic Medium','Arial Narrow';
+    text-align: center;
+}
+
+.back-content {
+    color: rgb(130, 154, 84);
+    padding: 0 20px;
+    font-family: 'Franklin Gothic Medium','Arial Narrow';
+    transform: rotateY(180deg)
+}
+
+#b2 {
+    width: 350px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hiddenNumber {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.back-content img {
+    max-width: 100%;      
+    max-height: 100%;     
+    object-fit: contain;  
+    display: block;     
+    margin: 0 auto;        
+}
+
+/* page 3 interaction */
+.color-btn {
+    display: block;
+    margin-top: 15px;
+    padding: 8px 16px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.color-btn:hover {
+    background-color: #555;
+}
+
+
+/* Color Change Styles */
+.color-change .front,
+.color-change .back {
+   /* background-color: #EE352E;  Default red color */
+    transition: background-color 0.5s ease;
+}
+
+/* Make sure buttons are clickable */
+#colorChangeBtn {
+    position: relative;
+    z-index: 100;
+    pointer-events: auto;
+}

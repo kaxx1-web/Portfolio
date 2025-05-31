@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Quiz | Works</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Schibsted+Grotesk:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href= "page.css"/>
+
+<body>
+    <div class="container">
+        <!-- ======= SIDEBAR NAVIGATION ======= -->
+        <div class="sidebar-container">
+            <div class="sidebar">
+                <a href="../index.html">
+                    <img src="../images/icon1.jpg" class="home" alt="Home"></a> 
+                <a href="../works.html">parsons</a> 
+                <a href="../assignments.html">personal</a> 
+                <a href="../contact.html">contact</a> 
+                <a href="../about.html">about me</a> 
+            </div>
+        </div>
+        
+        <!-- ======= HEADER SECTION ======= -->
+        <div class="header">
+            <div class="item-3">
+                <header>Community Tool</header>
+            </div>
+            <div class="bottomright">
+                Parsons
+            </div>
+        </div>
+
+        <!-- ======= MAIN CONTENT ======= -->
+        <div class="h1">
+            <div class="item-2">
+                <nav>
+                    <menu> 
+                        <!-- what holds the content//MENU
+                            Interactive Book Component -->
+                            <div class="book-container" id="book-project">
+                            <button id="prev-btn"> ← </button>
+                            
+                            <div id="book" class="book">
+                                <!-- Paper 1 -->
+                                <div id="p1" class="paper">
+                                    <div class="front">
+                                        <div id="f1" class="front-content">
+                                            nyc subway
+                                            just the MTA or is it the organization? 
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div id="b1" class="back-content">
+                                            As a new yorker, there has always been an issue within the transportation system!
+                                            Trying to commute from places has always been a headache, so here is a travel fact book as a new yorker who commutes on a daily basis.
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Paper 2 -->
+                                <div id="p2" class="paper">
+                                    <div class="front">
+                                
+                                        <div id="f2" class="front-content">
+                                            can you guess how much it costed during the 1970s?
+                                            <button style="display: block; margin-top: 10px;">
+                                            <button onclick="revealHiddenNumber()" style="display: block; margin-top: 10px;">Reveal</button>
+                                            <div id="hiddenNumber" style="display: none">30 cents</div>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div id="b2" class="back-content">
+                                            <img src="/images/nyct.webp" alt="colorpallete">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Paper 3 -->
+                                <div id="p3" class="paper">
+                                    <div class="front">
+                                        <div id="f3" class="front-content">
+                                            new york subway lines are sorted by color that breaks down the lines the train operate within the city
+                                            <button id="colorChangeBtn" class="color-btn">Change Color</button>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div id="b3" class="back-content">
+                                            Thank you for looking through this book for facts about new york transit!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <button id="next-btn">  →</button>
+                        </div>
+                    </menu>
+                </nav>
+            </div>
+        </div>
+
+        <!-- ======= FOOTER ======= -->
+        <footer id="footer">
+            <div class="footer-container">
+                <p>© Karen Xiao. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+</body>
+</html>

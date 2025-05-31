@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Schibsted+Grotesk:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tab.css">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar-container">
+            <div class="sidebar">
+                <a href="index.html"><img src="images/icon1.jpg" class="home" alt="Home"></a>
+                <a href="works.html">parsons </a>
+                <a>personal</a>
+                <a href="contact.html">contact</a>
+                <a href="about.html">about</a>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="item-2">
+            </div>
+        </div>
+
+        
+        <div class="header">
+            <div class="bottomright">
+                <header>personal projects</header>
+            </div>
+        </div>
+
+        <!-- <div class="main-content">
+            <div class="dropdown">
+                <img src="images/skchbk_Page_2.png" alt="sketchbook 1" width="400" height="260" class="centered-image">
+                <div class="dropdown-content">
+                <img src="images/skchbk_Page_2.png" alt="sketchbook 1" width="500" height="360" class="centered-image">
+                <div class="desc">Sketchbook audio studies</div>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="main-content">
+            <div style="text-align:center">
+                <h2> Art Gallery in course of 2025-26™</h2>
+                <p>Click on the images below:</p>
+            </div>
+          
+          <!-- The four columns -->
+          <div class="row">
+            <div class="column">
+              <img src="images/skchbk_Page_2.png" alt="sketchbook1" style="width:125%" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+              <img src="images/-2.png" alt="sketchbook2" style="width:125%" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+              <img src="images/-3.png" alt="sketchbook3" style="width:125%" onclick="myFunction(this);">
+            </div>
+          </div>
+          
+          <div class="gallery-container">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+            <img id="expandedImg" style="width:125">
+            <div id="imgtext"></div>
+          </div>
+          
+          <script>
+          function myFunction(imgs) {
+            var expandImg = document.getElementById("expandedImg");
+            var imgText = document.getElementById("imgtext");
+            expandImg.src = imgs.src;
+            imgText.innerHTML = imgs.alt;
+            expandImg.parentElement.style.display = "block";
+          }
+          </script>
+          
+        </div>
+           
+
+<footer>
+          <div class="footer-container">
+              <p>© Karen Xiao. All Rights Reserved.</p>
+          </div>
+      </footer>
+</body>
+</html>
